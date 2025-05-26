@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mariage de Bénédicte & Henri</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Bénédicte & Henri</h1>
+            <p>Nous célébrons notre amour le 27 septembre 2025</p>
+            <div class="countdown" id="countdown">
+                <div><span id="days">0</span> Jours</div>
+                <div><span id="hours">0</span> Heures</div>
+                <div><span id="minutes">0</span> Minutes</div>
+                <div><span id="seconds">0</span> Secondes</div>
+            </div>
+            <a href="#rsvp" class="btn">Confirmez votre présence</a>
+        </div>
+    </header>
+
+    <section class="section">
+        <h2>Notre Histoire</h2>
+        <p>Il y a cinq ans, sous un ciel étoilé, Bénédicte et Henri se sont rencontrés. Une conversation, un sourire, et une connexion instantanée ont marqué le début de leur histoire d'amour. Aujourd'hui, ils sont prêts à écrire un nouveau chapitre ensemble, entourés de leurs proches.</p>
+    </section>
+
+    <section class="section">
+        <h2>L'Événement</h2>
+        <p>Rejoignez-nous le 27 septembre 2025 à 16h00 pour une cérémonie à l'Église Saint-Pierre, suivie d'une réception au Domaine des Roses. Des informations sur les hébergements et le transport seront bientôt disponibles.</p>
+    </section>
+
+    <section class="section" id="rsvp">
+        <h2>Confirmez votre présence</h2>
+        <p>Nous serions ravis de partager cette journée spéciale avec vous. Veuillez confirmer votre présence avant le 1er août 2025.</p>
+        <form class="rsvp-form" id="rsvpForm" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdSBSr0PJCmA_QnQCRFxZbtHW5pcZsMNxsZ4WneVFOkVR1ljA/formResponse" method="POST">
+            <label for="name">Nom complet</label>
+            <input type="text" id="name" name="entry.1941103454" required>
+
+            <label for="guests">Nombre d'invités</label>
+            <select id="guests" name="entry.712440907" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select>
+
+            <label for="attendance">Serez-vous présent ?</label>
+            <select id="attendance" name="entry.1050661432" required>
+                <option value="Oui, avec plaisir !">Oui, avec plaisir !</option>
+                <option value="Non, malheureusement">Non, malheureusement</option>
+            </select>
+
+            <label for="message">Message (facultatif)</label>
+            <textarea id="message" name="entry.1280944555"></textarea>
+
+            <button type="submit">Envoyer</button>
+        </form>
+        <div class="form-success" id="formSuccess">Merci pour votre réponse ! Nous avons hâte de vous voir !</div>
+        <div class="form-error" id="formError">Une erreur s'est produite. Veuillez réessayer.</div>
+    </section>
+
+    <footer>
+        <p>Bénédicte & Henri - 27 septembre 2025</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

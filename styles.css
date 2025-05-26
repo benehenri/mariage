@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fdf6f0;
+    color: #2f2f2f;
+    font-family: 'Lora', serif;
+}
+
+.hero {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1519741497674-411a16ac13e7');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-content {
+    padding: 30px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.hero p {
+    font-size: 1.6rem;
+    margin-bottom: 40px;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+}
+
+.countdown div {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 15px 20px;
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+    min-width: 100px;
+}
+
+.countdown span {
+    display: block;
+    font-size: 2rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #a68a64;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-family: 'Lora', serif;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: #8a704c;
+    transform: translateY(-2px);
+}
+
+.section {
+    padding: 80px 20px;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin-bottom: 25px;
+    color: #2f2f2f;
+    position: relative;
+}
+
+.section h2::after {
+    content: '';
+    width: 60px;
+    height: 2px;
+    background-color: #a68a64;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #4a4a4a;
+}
+
+.rsvp-form {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 30px auto;
+}
+
+.rsvp-form label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: #2f2f2f;
+}
+
+.rsvp-form input,
+.rsvp-form select,
+.rsvp-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    font-family: 'Lora', serif;
+    font-size: 1rem;
+}
+
+.rsvp-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.rsvp-form button {
+    background-color: #a68a64;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.rsvp-form button:hover {
+    background-color: #8a704c;
+}
+
+.form-success,
+.form-error {
+    display: none;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.form-success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.form-error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #2f2f2f;
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+    .hero p {
+        font-size: 1.3rem;
+    }
+    .countdown {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    .countdown div {
+        min-width: 80px;
+    }
+    .section h2 {
+        font-size: 2.2rem;
+    }
+}
